@@ -7,7 +7,7 @@
         "bear/aura-router-module": "~0.1",
         "monolog/monolog": "~1.0",
         "ray/dbal-module": "dev-master",
-        "ritalin/omelet-bear-module": "0.1.1-alpha"
+        "ritalin/omelet-bear-module": "~0.1"
     },
     "require-dev": {
     },
