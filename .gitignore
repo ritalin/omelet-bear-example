@@ -9,3 +9,5 @@ build/
 nbproject
 vendor
 composer.lock
+var/log/*.log
+var/tmp/*/

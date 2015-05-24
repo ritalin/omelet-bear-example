@@ -2,9 +2,13 @@
 
 namespace MyVendor\Weekday\Infra;
 
+use Omelet\Annotation\Dao;
 use Omelet\Annotation\Select;
 use Omelet\Annotation\ParamAlt;
 
+/**
+ * @Dao
+ */
 interface TodoDao {
     /**
      * @Select
