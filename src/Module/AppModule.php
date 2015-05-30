@@ -11,6 +11,7 @@ use Ray\Di\Scope;
 use MyVendor\Weekday\Annotation\BenchMark;
 use MyVendor\Weekday\Interceptor\Benchmarker;
 
+use Omelet\Builder\Configuration;
 use Omelet\Module\DaoBuilderBearModule;
 
 use MyVendor\Weekday\Infra\TodoDao;
@@ -36,11 +37,11 @@ class AppModule extends AbstractModule
         
         $projectRoot = dirname(dirname(__DIR__));
         
-        $daoConf = [
-            'daoClassPath' => $projectRoot . '/var/tmp/auto_generated',
-            'sqlRootDir' => $projectRoot . '/sql',
-            'pdoDsn' => ['driver' => 'pdo_sqlite', 'path' => $projectRoot . '/var/db/todo.sqlite3']
-        ];
+        $daoConf = new Configuration(function ($c) use($projectRoot) {
+            $c->daoClassPath = $projectRoot . '/var/tmp/auto_generated';
+            $c->sqlRootDir = $projectRoot . '/sql';
+            $c->pdoDsn = "driver=pdo_sqlite&path={$projectRoot}/var/db/todo.sqlite3";
+        });
         
         $this->install(new DaoBuilderBearModule($daoConf, [
             TodoDao::class,

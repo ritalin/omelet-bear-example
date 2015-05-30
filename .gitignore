@@ -11,3 +11,5 @@ vendor
 composer.lock
 var/log/*.log
 var/tmp/*/
+tests/Target/.DS_Store
+tests/Target/SwitchDao.php
