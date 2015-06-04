@@ -12,6 +12,7 @@ use MyVendor\Weekday\Annotation\BenchMark;
 use MyVendor\Weekday\Interceptor\Benchmarker;
 
 use Omelet\Module\DaoBuilderBearModule;
+use Omelet\Builder\Configuration;
 
 use MyVendor\Weekday\Infra\TodoDao;
 

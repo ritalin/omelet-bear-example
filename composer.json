@@ -6,8 +6,7 @@
         "bear/package": "~1.0",
         "bear/aura-router-module": "~1.0",
         "monolog/monolog": "~1.0",
-        "ray/dbal-module": "~0.1",
-        "ritalin/omelet-bear-module": "~0.1"
+        "ritalin/omelet-bear-module": "~0.2"
     },
     "require-dev": {
     },
