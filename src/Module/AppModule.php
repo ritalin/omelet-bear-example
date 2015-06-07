@@ -40,7 +40,11 @@ class AppModule extends AbstractModule
         $daoConf = new Configuration(function ($c) use($projectRoot) {
             $c->daoClassPath = $projectRoot . '/var/tmp/auto_generated';
             $c->sqlRootDir = $projectRoot . '/sql';
-            $c->connectionString = "driver=pdo_sqlite&path={$projectRoot}/var/db/todo.sqlite3";
+            $c->watchMode = 'Always';
+            $c->returnCaseSensor = 'UpperSnake';
+            $c->connectionString = http_build_query([
+                'driver' => 'pdo_sqlite', 'path' => $projectRoot . '/var/db/todo.sqlite3'
+            ]);
         });
         
         $this->install(new DaoBuilderBearModule($daoConf, [

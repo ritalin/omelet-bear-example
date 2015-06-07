@@ -10,7 +10,7 @@
     // console
     $ php bootstrap/api.php get "/weekday/2015/5/20"
     // built-in web
-    $ php -S 0.0.0.0:8081 -t var/www/
+    $ php -S 127.0.0.1:8081 -t var/www/
 
 ## Requirements
 
