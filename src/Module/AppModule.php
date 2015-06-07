@@ -41,7 +41,6 @@ class AppModule extends AbstractModule
             $c->daoClassPath = $projectRoot . '/var/tmp/auto_generated';
             $c->sqlRootDir = $projectRoot . '/sql';
             $c->watchMode = 'Always';
-            $c->returnCaseSensor = 'UpperSnake';
             $c->connectionString = http_build_query([
                 'driver' => 'pdo_sqlite', 'path' => $projectRoot . '/var/db/todo.sqlite3'
             ]);
